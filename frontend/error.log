@@ -1,0 +1,10 @@
+
+> @figma/my-make-file@0.0.1 dev
+> vite
+
+error when starting dev server:
+Error: Port 5173 is already in use
+    at Server.onError (file:///D:/Projects/VoteOn/frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:25023:18)
+    at Server.emit (node:events:518:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)

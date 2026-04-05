@@ -1,0 +1,41 @@
+# Production Environment Variables for Render + Supabase
+
+# Security (CRITICAL - Change these!)
+SECRET_KEY=your-super-secure-32-character-secret-key-change-this-now
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=15
+REFRESH_TOKEN_EXPIRE_DAYS=7
+
+# Database (Supabase Connection String)
+# Get from: Supabase Dashboard → Settings → Database → Connection String
+DATABASE_URL=postgresql://postgres.xxxxx:[YOUR_PASSWORD]@aws-0-[region].pooler.supabase.com:6543/postgres
+
+# Environment
+ENVIRONMENT=production
+DEBUG=false
+
+# Rate Limiting
+RATE_LIMIT_LOGIN=5
+RATE_LIMIT_GENERAL=100
+
+# CORS (Update with your Netlify URL after frontend deployment)
+CORS_ORIGINS=http://localhost:5173,https://your-app-name.netlify.app
+
+# Security Headers
+ENABLE_SECURITY_HEADERS=true
+
+# File Upload
+UPLOAD_DIR=uploads
+MAX_UPLOAD_SIZE=5242880
+
+# Logging
+LOG_LEVEL=INFO
+
+# Google OAuth (Optional - configure later)
+GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=https://your-backend-url.onrender.com/api/auth/google/callback
+
+# IMPORTANT: Render Configuration
+# Build Command: cd backend && pip install -r requirements.txt
+# Start Command: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
