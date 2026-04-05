@@ -223,22 +223,6 @@ export function RegisterPage() {
             </div>
           )}
 
-          {/* Google Register */}
-          <button
-            type="button"
-            onClick={() => { window.location.href = `${window.location.origin}/api/auth/google`; }}
-            className="w-full flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl py-3 text-sm font-medium transition-all mb-4"
-          >
-            <Chrome size={17} className="text-slate-300" />
-            Continue with Google
-          </button>
-
-          <div className="flex items-center gap-3 mb-4">
-            <div className="flex-1 h-px bg-slate-800" />
-            <span className="text-slate-500 text-xs">or register with email</span>
-            <div className="flex-1 h-px bg-slate-800" />
-          </div>
-
           {/* Registration Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Username Field */}
