@@ -226,7 +226,7 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
     result = await oauth_service.handle_callback(request, db)
     
     # Redirect to frontend with tokens so it can store them and navigate
-    frontend_url = "http://localhost:5173"
+    frontend_url = "https://voteon.netlify.app"
     access_token = result["access_token"]
     refresh_token = result["refresh_token"]
     role = result["user"]["role"]

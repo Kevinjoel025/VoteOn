@@ -19,7 +19,7 @@ RATE_LIMIT_LOGIN=5
 RATE_LIMIT_GENERAL=100
 
 # CORS (Update with your Netlify URL after frontend deployment)
-CORS_ORIGINS=http://localhost:5173,https://your-app-name.netlify.app
+CORS_ORIGINS=https://voteon.netlify.app,https://your-app-name.netlify.app
 
 # Security Headers
 ENABLE_SECURITY_HEADERS=true

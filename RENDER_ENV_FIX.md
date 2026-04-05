@@ -21,7 +21,7 @@ The CORS_ORIGINS environment variable is either:
 
 ### Step 2: Add/Fix CORS_ORIGINS
 **Key**: `CORS_ORIGINS`
-**Value**: `http://localhost:5173,http://localhost:3000`
+**Value**: `https://voteon.netlify.app,http://localhost:3000`
 
 ### Step 3: Add All Required Environment Variables
 
@@ -32,7 +32,7 @@ SECRET_KEY=your-32-character-secret-key-here-change-this
 DATABASE_URL=your-supabase-connection-string
 ENVIRONMENT=production
 DEBUG=false
-CORS_ORIGINS=http://localhost:5173,http://localhost:3000
+CORS_ORIGINS=https://voteon.netlify.app,http://localhost:3000
 RATE_LIMIT_LOGIN=5
 RATE_LIMIT_GENERAL=100
 ENABLE_SECURITY_HEADERS=true

@@ -5,7 +5,6 @@ Environment variables and settings
 
 from pydantic_settings import BaseSettings
 from typing import List
-import os
 
 
 class Settings(BaseSettings):
@@ -16,7 +15,7 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     
     # Database
-    DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/voteon_dev"
+    DATABASE_URL: str = ""
     
     # Security
     SECRET_KEY: str = "your-secret-key-change-in-production"
@@ -25,7 +24,7 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
     
     # CORS - will be parsed from comma-separated string in .env  
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:3000"]
+    CORS_ORIGINS: List[str] = ["https://voteon.netlify.app", "http://localhost:5174", "http://localhost:5175", "http://localhost:3000"]
     
     # Google OAuth
     GOOGLE_CLIENT_ID: str = ""
@@ -41,7 +40,7 @@ class Settings(BaseSettings):
     ALLOWED_FILE_TYPES: List[str] = [".pdf", ".docx", ".jpg", ".jpeg", ".png"]
     
     class Config:
-        env_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+        env_file = ".env"
         case_sensitive = True
         
     @classmethod

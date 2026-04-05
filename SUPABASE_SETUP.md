@@ -36,7 +36,7 @@ Add these environment variables:
 SECRET_KEY = your-32-character-secret-key-here
 ENVIRONMENT = production
 DEBUG = false
-CORS_ORIGINS = http://localhost:5173,https://your-app.netlify.app
+CORS_ORIGINS = https://voteon.netlify.app,https://your-app.netlify.app
 RATE_LIMIT_LOGIN = 5
 RATE_LIMIT_GENERAL = 100
 ENABLE_SECURITY_HEADERS = true
