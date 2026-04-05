@@ -1,9 +1,9 @@
 // API Configuration for VoteOn Frontend
-// Backend: Local Development
+// Local dev: BASE_URL stays `/api` (Vite proxy in vite.config.ts).
+// Production (e.g. Netlify): set VITE_API_BASE_URL at build time, e.g. https://your-api.com/api
 
 const API_CONFIG = {
-  // Use relative URL - Vite will proxy to backend
-  BASE_URL: '/api',
+  BASE_URL: import.meta.env.VITE_API_BASE_URL || '/api',
   
   // API Endpoints
   ENDPOINTS: {
